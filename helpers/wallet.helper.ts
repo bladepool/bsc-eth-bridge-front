@@ -5,6 +5,9 @@ import { walletProvider } from "./wallet-connect.helper";
 
 const ETH_CHAIN_ID = 1
 const BSC_CHAIN_ID = 56
+const BSCT_CHAIN_ID = 97
+const TRES_CHAIN_ID = 6066
+const TREST_CHAIN_ID = 6066
 
 export const mapSignerAsWallet = async (signer: Signer, networkType: NetworkType) => {
     const chainId = await signer.getChainId()
@@ -15,7 +18,7 @@ export const mapSignerAsWallet = async (signer: Signer, networkType: NetworkType
         gasPrice: ethers.utils.formatEther(await signer.getGasPrice()),
         transactionCount: await signer.getTransactionCount(),
         networkType: networkType,
-        chainType: ETH_CHAIN_ID === chainId ? ChainTypes.erc20 : (chainId === BSC_CHAIN_ID ? ChainTypes.bep20 : ChainTypes.other),
+        chainType: ETH_CHAIN_ID === chainId ? ChainTypes.erc20 : chainId === BSC_CHAIN_ID ? ChainTypes.bep20 : chainId === BSCT_CHAIN_ID ? ChainTypes.bep20 : chainId === TRES_CHAIN_ID ? ChainTypes.erc20 : (chainId === TREST_CHAIN_ID ? ChainTypes.erc20 : ChainTypes.other),
         capsAmount: 0,
         signer
     }

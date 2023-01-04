@@ -17,21 +17,21 @@ const Footer: React.FC<{}> = () => {
                     <Discord className={style.socialLogo}/>
                 </a>
                 <a
-                    href="https://t.me/ternoadiscussions"
+                    href="https://links.tresleches.finance/group"
                     target="_blank"
                     rel="noopener"
                 >
                     <Telegram className={style.socialLogo}/>
                 </a>
                 <a
-                    href="https://twitter.com/ternoa_"
+                    href="https://twitter.com/treslecheschain"
                     target="_blank"
                     rel="noopener"
                 >
                     <Twitter className={style.socialLogo}/>
                 </a>
                 <a
-                    href="https://www.instagram.com/ternoa_/"
+                    href="https://www.instagram.com/treslecheschain"
                     target="_blank"
                     rel="noopener"
                 >
@@ -57,10 +57,10 @@ const Footer: React.FC<{}> = () => {
                 </a>
             </div>
             <div className={"d-none d-md-block col-md-6 mb-2 d-flex flex-row align-items-center justify-content-left"}>
-                <p className={style.footerCopyright}>© 2021 Ternoa Bridge developed and designed by ternoa.com. All rights reserved.</p>
+                <p className={style.footerCopyright}>© 2023 Tres Leches Bridge developed and designed by treschain.com. All rights reserved.</p>
             </div>
             <div className={"d-md-none col-12 mb-2 d-flex flex-row align-items-center justify-content-center"}>
-                <p className={style.footerCopyright}>© 2021 Ternoa Bridge. All rights reserved.</p>
+                <p className={style.footerCopyright}>© 2023 Tres Leches Bridge. All rights reserved.</p>
             </div>
         </div>
     )

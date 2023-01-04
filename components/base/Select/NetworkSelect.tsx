@@ -11,6 +11,7 @@ import Binance from 'components/assets/Networks/Binance';
 import { ChainType, ChainTypes } from 'interfaces';
 
 import { useAppSelector } from 'redux/hooks';
+import Tresleches from 'components/assets/Networks/Tresleches';
 
 export interface Option {
     value: ChainType;
@@ -21,7 +22,10 @@ export interface Option {
 
 export const options: Option[] = [
     { value: ChainTypes.erc20, label: "Ethereum network (ERC20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_ETH_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_ETH || '' },
-    { value: ChainTypes.bep20, label: "Binance Smart Chain (BEP20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_BSC_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_BSC || '' }
+    { value: ChainTypes.bep20, label: "Binance Smart Chain (BEP20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_BSC_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_BSC || '' },
+    { value: ChainTypes.ttres20, label: "Tres Leches Testnet (TTRES20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_TREST_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_TRES_TOKEN_ADDRESS_TREST || '' },
+    { value: ChainTypes.ttres20, label: "Tres Leches Testnet (TRES20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_TRES_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_TRES_TOKEN_ADDRESS_TRES || '' },
+    { value: ChainTypes.tbep20, label: "Binance Smart Chain Testnet (TBEP20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_BSCT_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_TRES_TOKEN_ADDRESS_BSCT || '' }
 ]
 
 export interface NetworkSelectProps {

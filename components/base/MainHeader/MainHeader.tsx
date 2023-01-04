@@ -45,7 +45,7 @@ const MainHeader: React.FC<HeaderProps> = ({ setConnectModalOpen, isWindowEthAva
                         <div className={"d-flex"}>
                             <div className={style.capsContainer}>
                                 <div className={"d-flex py-2 px-3 align-items-center"}>
-                                    <div className={style.capsAmount}>{formatCaps(userWallet.capsAmount) + " Caps"}</div>
+                                    <div className={style.capsAmount}>{formatCaps(userWallet.capsAmount) + " TRES"}</div>
                                     <div className={style.capsAvailable}>{"Available"}</div>
                                 </div>
                             </div>
@@ -67,6 +67,15 @@ const MainHeader: React.FC<HeaderProps> = ({ setConnectModalOpen, isWindowEthAva
                                                         userWallet.chainType===ChainTypes.bep20 ?
                                                             "Binance"
                                                         :
+                                                        userWallet.chainType===ChainTypes.tbep20 ?
+                                                        "Binance Testnet"
+                                                    :
+                                                    userWallet.chainType===ChainTypes.tres20 ?
+                                                    "Tres Leches Mainnet"
+                                                :
+                                                userWallet.chainType===ChainTypes.ttres20 ?
+                                                "Tres Leches Testnet"
+                                            :
                                                             "Wrong"
                                                     } 
                                                     Network`}

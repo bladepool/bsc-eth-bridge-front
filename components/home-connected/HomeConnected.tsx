@@ -164,13 +164,13 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
             <Head>
                 <title>BSC ETH Bridge</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta name="description" content="BSC ETH Bridge, by Ternoa." />
+                <meta name="description" content="BSC ETH Bridge, by Tres Leches." />
             </Head>
             <div className={"mainContainer"}>
                 <WarningBanner />
                 <MainHeader setConnectModalOpen={setPopupConnectionOpen} isWindowEthAvailable={isWindowEthAvailable} handleConnect={handleConnect} />
                 <div className={"container py-3 d-flex flex-column align-items-center"}>
-                    <div className={style.intro}>The safest, fastest and most secure way to swap Caps to binance smart chain.</div>
+                    <div className={style.intro}>The safest, fastest and most secure way to swap TRES to binance smart chain.</div>
                     {userWallet &&
                         <>
                             <div className={style.swapAddressLabel}>The swap will occur on your same adress</div>
@@ -231,7 +231,7 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
                                 <div className={"col-10"} onClick={() => maskedTextInput?.focus()}>
                                     <div>
                                         <span className={style.capsAmount}>
-                                            {formatCaps(capsToSwap) + " CAPS"}
+                                            {formatCaps(capsToSwap) + " TRES"}
                                             <input
                                                 type="number"
                                                 value={capsToSwap}
@@ -278,7 +278,7 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
                             </div>
                         </div>
                         <div className={style.minMaxContainer}>
-                            {`${formatCaps(minCapsToSwap)} CAPS min - ${formatCaps(maxCapsToSwap)} CAPS max`}
+                            {`${formatCaps(minCapsToSwap)} TRES min - ${formatCaps(maxCapsToSwap)} TRES max`}
                         </div>
                     </div>
                     <div className={"pt-5"}>

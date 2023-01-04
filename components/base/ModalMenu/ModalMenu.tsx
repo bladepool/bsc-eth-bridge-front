@@ -43,7 +43,7 @@ const ModalMenu: React.FC<ModalMenuProps> = ({ modalMenuOpen, setModalMenuOpen, 
                         {(userWallet) &&
                             <>
                                 <div className={"row py-3"}>
-                                    <div className={style.capsAmount}>{formatCaps(userWallet.capsAmount) + " CAPS"}</div>
+                                    <div className={style.capsAmount}>{formatCaps(userWallet.capsAmount) + " TRES"}</div>
                                     <div className={style.capsAvailable}>Available</div>
                                 </div>
                                 <div className={"row py-3"}>
@@ -56,6 +56,15 @@ const ModalMenu: React.FC<ModalMenuProps> = ({ modalMenuOpen, setModalMenuOpen, 
                                                     userWallet.chainType===ChainTypes.bep20 ?
                                                         "Binance"
                                                     :
+                                                    userWallet.chainType===ChainTypes.tbep20 ?
+                                                    "Binance Testnet"
+                                                :
+                                                userWallet.chainType===ChainTypes.tres20 ?
+                                                "Tres Leches Mainnet"
+                                            :
+                                            userWallet.chainType===ChainTypes.ttres20 ?
+                                            "Tres Leches Testnet"
+                                        :
                                                         "Wrong"
                                                 } 
                                             Network`}

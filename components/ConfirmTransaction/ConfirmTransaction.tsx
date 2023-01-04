@@ -79,7 +79,7 @@ const ConfirmTransaction: React.FC<ConfirmTransactionProps> = ({ open, setOpen, 
                                 </div>
                                 <div className={"row d-flex text-center"}>
                                     <div className={style.capsToSwapContainer}>
-                                        <span className={style.capsToSwap}>{`${formatCaps(capsToSwap)} CAPS`}</span>
+                                        <span className={style.capsToSwap}>{`${formatCaps(capsToSwap)} TRES`}</span>
                                     </div>
                                 </div>
                                 <div className={"row px-4 pt-md-3 pt-2"}>
@@ -93,7 +93,7 @@ const ConfirmTransaction: React.FC<ConfirmTransactionProps> = ({ open, setOpen, 
                                 <div className={"row py-3 px-4"}>
                                     <div className={"col-6 " + style.leftLabel}>Asset</div>
                                     <div className={"col-6 " + style.rightLabel}>
-                                        <Caps className={style.gridIcon} /> {` CAPS`}
+                                        <Caps className={style.gridIcon} /> {` TRES`}
                                     </div>
                                     <div className={"col-6 " + style.leftLabel}>Destination</div>
                                     <div className={"col-6 " + style.rightLabel}>
@@ -120,7 +120,7 @@ const ConfirmTransaction: React.FC<ConfirmTransactionProps> = ({ open, setOpen, 
                                     </div>
                                     <div className={"col-6 " + style.leftLabel}>You will receive</div>
                                     <div className={"col-6 " + style.rightLabel}>
-                                        <Caps className={style.gridIcon} /> {` ${formatCaps(capsToSwap)} CAPS`}
+                                        <Caps className={style.gridIcon} /> {` ${formatCaps(capsToSwap)} TRES`}
                                     </div>
                                 </div>
                                 <div className={"row px-4"}>
@@ -136,7 +136,7 @@ const ConfirmTransaction: React.FC<ConfirmTransactionProps> = ({ open, setOpen, 
                             </div>
                                 </div>
                                 <div className={"row d-flex justify-content-center"}>
-                                    <span className={style.capsAddressLabel}>You will receive your CAPS on the same address. Only the network will change.</span>
+                                    <span className={style.capsAddressLabel}>You will receive your TRES on the same address. Only the network will change.</span>
                                 </div>
                             </div>
                         </div>
