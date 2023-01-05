@@ -67,15 +67,6 @@ const MainHeader: React.FC<HeaderProps> = ({ setConnectModalOpen, isWindowEthAva
                                                         userWallet.chainType===ChainTypes.bep20 ?
                                                             "Binance"
                                                         :
-                                                        userWallet.chainType===ChainTypes.tbep20 ?
-                                                        "Binance Testnet"
-                                                    :
-                                                    userWallet.chainType===ChainTypes.tres20 ?
-                                                    "Tres Leches Mainnet"
-                                                :
-                                                userWallet.chainType===ChainTypes.ttres20 ?
-                                                "Tres Leches Testnet"
-                                            :
                                                             "Wrong"
                                                     } 
                                                     Network`}
