@@ -54,7 +54,7 @@ const ModalMenu: React.FC<ModalMenuProps> = ({ modalMenuOpen, setModalMenuOpen, 
                                                     "Ethereum" 
                                                 : 
                                                     userWallet.chainType===ChainTypes.bep20 ?
-                                                        "Binance"
+                                                        "TresLeches"
                                         
                                         :
                                                         "Wrong"

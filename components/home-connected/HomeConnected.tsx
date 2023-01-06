@@ -170,7 +170,7 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
                 <WarningBanner />
                 <MainHeader setConnectModalOpen={setPopupConnectionOpen} isWindowEthAvailable={isWindowEthAvailable} handleConnect={handleConnect} />
                 <div className={"container py-3 d-flex flex-column align-items-center"}>
-                    <div className={style.intro}>The safest, fastest and most secure way to swap TRES to binance smart chain.</div>
+                    <div className={style.intro}>The safest, fastest and most secure way to swap TRES to TresLeches smart chain.</div>
                     {userWallet &&
                         <>
                             <div className={style.swapAddressLabel}>The swap will occur on your same adress</div>
@@ -204,7 +204,7 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
                         </div>
                     </div>
                     <div className={style.addNetwork}>
-                        <span className={style.addNetworkLabel}>{"If you have not added Binance Smart Chain network in your MetaMask yet, please click "}</span>
+                        <span className={style.addNetworkLabel}>{"If you have not added TresLeches Smart Chain network in your MetaMask yet, please click "}</span>
                         {userWallet && userWallet.networkType === "metamask" && isWindowEthAvailable ? 
                             <a
                                 onClick={()=>(userWallet.chainType !== ChainTypes.bep20) ? addSwitchBSCNetwork() : setNetworkAlreadyAdded(true)}
@@ -214,7 +214,7 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
                             </a>
                         :
                             <a
-                                href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain"
+                                href="https://academy.TresLeches.com/en/articles/connecting-metamask-to-TresLeches-smart-chain"
                                 target="_blank"
                                 rel="noopener"
                                 className={style.addNetworkButton}
@@ -391,7 +391,7 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
                             <a 
                                 target="_blank" rel="noopener" className="btn btn-outline-error rounded-pill"
                                 href={
-                                    `https://${(receipt?.to as string).toLowerCase() === process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_ETH ? "etherscan.io" : "bscscan.com"}/tx/${receipt?.transactionHash}`
+                                    `https://${(receipt?.to as string).toLowerCase() === process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_ETH ? "goerli.etherscan.io" : "explorer-test.tresleches.finance"}/tx/${receipt?.transactionHash}`
                                 }>
                                     <div className={"d-flex align-items-center justify-content-center px-2"}>
                                         {"View transaction on " + ((receipt?.to as string).toLowerCase() === process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_ETH ? "Etherscan" : "BscScan")}
@@ -410,7 +410,7 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
                     setOpen={setNetworkAlreadyAdded}
                 >
                     <div className={style.modalConnectLabel}>
-                        The Binance Smart Chain network is already added.
+                        The TresLeches Smart Chain network is already added.
                     </div>
                     <div className={"py-4"}>
                         <a className={"btn btn-outline-primary rounded-pill"} onClick={() => setNetworkAlreadyAdded(false)}>

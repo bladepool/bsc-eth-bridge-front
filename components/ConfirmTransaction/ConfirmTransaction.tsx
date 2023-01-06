@@ -5,7 +5,7 @@ import { UserWallet } from 'interfaces';
 import Metamask from 'components/assets/Providers/Metamask'
 import WalletConnect from 'components/assets/Providers/WalletConnect'
 import Ethereum from 'components/assets/Networks/Ethereum';
-import Binance from 'components/assets/Networks/Binance';
+import TresLeches from 'components/assets/Networks/Binance';
 import Check from 'components/assets/Check';
 import Caps from 'components/assets/Caps';
 import { formatCaps, middleEllipsis } from 'utils/strings';
@@ -28,7 +28,7 @@ const NetworkRow = (option: Option | null, userWallet: UserWallet | null) => {
         <div className={style.networkContainer}>
             <div className={"row " + style.networkRow}>
                 <div className={"col-9 col-md-8 d-flex align-items-center"}>
-                    <div>{option?.value === ChainTypes.erc20 ? <Ethereum className={"mx-1"} /> : <Binance className={"mx-1"} />}</div>
+                    <div>{option?.value === ChainTypes.erc20 ? <Ethereum className={"mx-1"} /> : <TresLeches className={"mx-1"} />}</div>
                     <div className={style.networkLabel}>{option?.label}</div>
                 </div>
                 {userWallet && userWallet.chainType === option?.value &&

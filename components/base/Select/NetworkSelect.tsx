@@ -6,7 +6,7 @@ import Check from 'components/assets/Check';
 import Metamask from 'components/assets/Providers/Metamask'
 import WalletConnect from 'components/assets/Providers/WalletConnect'
 import Ethereum from 'components/assets/Networks/Ethereum';
-import Binance from 'components/assets/Networks/Binance';
+import TresLeches from 'components/assets/Networks/Binance';
 
 import { ChainType, ChainTypes } from 'interfaces';
 
@@ -22,7 +22,7 @@ export interface Option {
 
 export const options: Option[] = [
     { value: ChainTypes.erc20, label: "Ethereum network (ERC20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_ETH_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_ETH || '' },
-    { value: ChainTypes.bep20, label: "Binance Smart Chain (BEP20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_BSC_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_BSC || '' }
+    { value: ChainTypes.bep20, label: "Tres Leches Chain (TRES20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_BSC_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_BSC || '' }
 ]
 
 export interface NetworkSelectProps {
@@ -50,7 +50,7 @@ const NetworkSelect: React.FC<NetworkSelectProps> = ({ selected, handleChange, i
                                     {selected?.value === ChainTypes.erc20 ? 
                                         <Ethereum className={"mx-1"}/> 
                                     : 
-                                        <Binance className={"mx-1"}/>}
+                                        <TresLeches className={"mx-1"}/>}
                                 </div>
                                 <div className={style.networkLabel}>{selected?.label}</div>
                             </div>
@@ -80,7 +80,7 @@ const NetworkSelect: React.FC<NetworkSelectProps> = ({ selected, handleChange, i
                                     {notSelected.value === ChainTypes.erc20 ? 
                                         <Ethereum className={"mx-1"}/> 
                                     : 
-                                        <Binance className={"mx-1"}/>}
+                                        <TresLeches className={"mx-1"}/>}
                                 </div>
                                 <div>{notSelected.label}</div>
                             </div>

@@ -65,7 +65,7 @@ const MainHeader: React.FC<HeaderProps> = ({ setConnectModalOpen, isWindowEthAva
                                                         "Ethereum" 
                                                     : 
                                                         userWallet.chainType===ChainTypes.bep20 ?
-                                                            "Binance"
+                                                            "TresLeches"
                                                         :
                                                             "Wrong"
                                                     } 

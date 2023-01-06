@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface BinanceProps {
+interface TresLechesProps {
   className?: string;
 }
 
-const Binance: React.FC<BinanceProps> = ({ className }) => (
+const TresLeches: React.FC<TresLechesProps> = ({ className }) => (
   <svg
   xmlns="http://www.w3.org/2000/svg"
   width="32"
@@ -37,4 +37,4 @@ const Binance: React.FC<BinanceProps> = ({ className }) => (
     </svg>
 );
 
-export default Binance;
+export default TresLeches;

@@ -64,7 +64,7 @@ const contractAbi = [
 ];
 export const getDefaultProviderNetwork = (network: Option | null) => {
     switch (network?.value) {
-        case ChainTypes.bep20: return 'https://data-seed-prebsc-1-s3.binance.org:8545'
+        case ChainTypes.bep20: return 'https://data-seed-prebsc-1-s3.TresLeches.org:8545'
         default:
             return 'https://eth-goerli.public.blastapi.io'
     }

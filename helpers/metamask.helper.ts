@@ -26,15 +26,15 @@ export const addSwitchBSCNetwork = async () => {
         method: 'wallet_addEthereumChain',
         params: [
             {
-                "chainId": "0x38", //56 in decimal
-                "chainName": "Binance Smart Chain",
-                "rpcUrls": ["https://bsc-dataseed.binance.org/"],
+                "chainId": "0X17B2", //56 in decimal
+                "chainName": "Tres Leches - Testnet",
+                "rpcUrls": ["https://rpc-test.tresleches.finance/"],
                 "nativeCurrency": {
-                    "name": "BNB",
-                    "symbol": "BNB",
+                    "name": "Tres Leches Chain",
+                    "symbol": "TRES",
                     "decimals": 18
                 },
-                "blockExplorerUrls": ["https://bscscan.com"]
+                "blockExplorerUrls": ["https://explorer-test.tresleches.finance"]
                 }
         ]
     });
