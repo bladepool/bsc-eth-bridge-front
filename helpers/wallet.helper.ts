@@ -4,7 +4,7 @@ import { ChainTypes, NetworkType } from "interfaces";
 import { walletProvider } from "./wallet-connect.helper";
 
 const ETH_CHAIN_ID = 5
-const BSC_CHAIN_ID = 97
+const TRES_CHAIN_ID = 6065
 
 
 export const mapSignerAsWallet = async (signer: Signer, networkType: NetworkType) => {
@@ -16,7 +16,7 @@ export const mapSignerAsWallet = async (signer: Signer, networkType: NetworkType
         gasPrice: ethers.utils.formatEther(await signer.getGasPrice()),
         transactionCount: await signer.getTransactionCount(),
         networkType: networkType,
-        chainType: ETH_CHAIN_ID === chainId ? ChainTypes.erc20 : (chainId === BSC_CHAIN_ID ? ChainTypes.bep20 : ChainTypes.other),
+        chainType: ETH_CHAIN_ID === chainId ? ChainTypes.erc20 : (chainId === TRES_CHAIN_ID ? ChainTypes.bep20 : ChainTypes.other),
         capsAmount: 0,
         signer
     }
@@ -64,7 +64,7 @@ const contractAbi = [
 ];
 export const getDefaultProviderNetwork = (network: Option | null) => {
     switch (network?.value) {
-        case ChainTypes.bep20: return 'https://data-seed-prebsc-1-s3.TresLeches.org:8545'
+        case ChainTypes.bep20: return 'https://data-seed-preTRES-1-s3.TresLeches.org:8545'
         default:
             return 'https://eth-goerli.public.blastapi.io'
     }

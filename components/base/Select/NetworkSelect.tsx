@@ -22,7 +22,7 @@ export interface Option {
 
 export const options: Option[] = [
     { value: ChainTypes.erc20, label: "Ethereum network (ERC20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_ETH_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_ETH || '' },
-    { value: ChainTypes.bep20, label: "Tres Leches Chain (TRES20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_BSC_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_BSC || '' }
+    { value: ChainTypes.bep20, label: "Tres Leches Chain (TRES20)", bridgeAddress: process.env.NEXT_PUBLIC_BRIDGE_TRES_ADDRESS || '', tokenAddress: process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_TRES || '' }
 ]
 
 export interface NetworkSelectProps {

@@ -18,7 +18,7 @@ export const connect = async (): Promise<UserWallet> => {
     }
 }
 
-export const addSwitchBSCNetwork = async () => {
+export const addSwitchTRESNetwork = async () => {
     if (!(<any>window).ethereum) {
         throw new Error('MetaMask provider not available');
     }

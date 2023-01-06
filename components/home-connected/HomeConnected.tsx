@@ -17,7 +17,7 @@ import { actions } from 'redux/walletUser/actions';
 import { ChainTypes, NetworkType } from 'interfaces';
 import { connectMetaMask, connectWalletConnect } from 'actions/connect';
 import { walletProvider } from 'helpers/wallet-connect.helper';
-import { addSwitchBSCNetwork } from 'helpers/metamask.helper';
+import { addSwitchTRESNetwork } from 'helpers/metamask.helper';
 import Metamask from 'components/assets/Providers/Metamask';
 import WalletConnect from 'components/assets/Providers/WalletConnect';
 import { clear, get } from 'helpers/storage.helper'
@@ -162,9 +162,9 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
     return (
         <>
             <Head>
-                <title>BSC ETH Bridge</title>
+                <title>TRES ETH Bridge</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-                <meta name="description" content="BSC ETH Bridge, by Tres Leches." />
+                <meta name="description" content="TRES ETH Bridge, by Tres Leches." />
             </Head>
             <div className={"mainContainer"}>
                 <WarningBanner />
@@ -207,7 +207,7 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
                         <span className={style.addNetworkLabel}>{"If you have not added TresLeches Smart Chain network in your MetaMask yet, please click "}</span>
                         {userWallet && userWallet.networkType === "metamask" && isWindowEthAvailable ? 
                             <a
-                                onClick={()=>(userWallet.chainType !== ChainTypes.bep20) ? addSwitchBSCNetwork() : setNetworkAlreadyAdded(true)}
+                                onClick={()=>(userWallet.chainType !== ChainTypes.bep20) ? addSwitchTRESNetwork() : setNetworkAlreadyAdded(true)}
                                 className={style.addNetworkButton}
                             >
                                 Add Network
@@ -342,7 +342,7 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
                     open={(userWallet && userWallet.chainType === ChainTypes.other)}
                 >
                     <div className={style.errorNetworkLabel}>
-                        Please select  the ETH main network or the BSC main network in your wallet to continue.
+                        Please select  the ETH main network or the TRES main network in your wallet to continue.
                     </div>
                 </GenericModal>
                 {/* Wrong network selected modal */}
@@ -394,7 +394,7 @@ const HomeConnected: React.FC<HomeConnectedProps> = () => {
                                     `https://${(receipt?.to as string).toLowerCase() === process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_ETH ? "goerli.etherscan.io" : "explorer-test.tresleches.finance"}/tx/${receipt?.transactionHash}`
                                 }>
                                     <div className={"d-flex align-items-center justify-content-center px-2"}>
-                                        {"View transaction on " + ((receipt?.to as string).toLowerCase() === process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_ETH ? "Etherscan" : "BscScan")}
+                                        {"View transaction on " + ((receipt?.to as string).toLowerCase() === process.env.NEXT_PUBLIC_CAPS_TOKEN_ADDRESS_ETH ? "Etherscan" : "TRESScan")}
                                     </div>
                             </a>
                         :
